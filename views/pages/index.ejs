@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main page</title>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- CSS only -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/web.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script:wght@600&family=Unna&display=swap" rel="stylesheet">
+
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#fl").click(function(){
+                $("#pa").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#f").click(function(){
+                $("#p").slideToggle("slow");
+            });
+        });
+        $(document).ready(function(){
+            $("#s").click(function(){
+                $("#r").slideToggle("slow");
+            });
+        });
+    </script>
+    <style media="screen">
+        a{
+            text-decoration: none;
+        }
+        .scale {
+            transition: 0.5s;
+        }
+        .scale:hover {
+            transform: scale(1.08);
+        }
+    </style>
+    <style>
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #fefefe;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+
+        #pa, #fl {
+            padding: 5px;
+            text-align: center;
+            background-color: #fefefe;
+            border: solid 1px #c3c3c3;
+        }
+
+        #pa {
+            padding: 50px;
+            display: none;
+        }
+        #p, #f {
+            padding: 5px;
+            text-align: center;
+            background-color: #fefefe;
+            border: solid 1px #c3c3c3;
+        }
+
+        #p {
+            padding: 50px;
+            display: none;
+        }
+        #r, #s {
+            padding: 5px;
+            text-align: center;
+            background-color: #fefefe;
+            border: solid 1px #c3c3c3;
+        }
+
+        #r {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-xxl">
+            <nav class="navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="main">
+                        <img src="photos/logo.png" alt="" width="300" height="150" >
+                    </a>
+                </div>
+            </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="portfolio1">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about">About us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="services" id="navbarDropdown" role="button" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">State symbols</a></li>
+                            <li><a class="dropdown-item" href="team">Information</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Kazakhstan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"href="contacts">Contacts</a>
+                    </li>
+                    <% if(locals.loggedin==0){ %>
+                    <li class="nav-item">
+                        <form action="/profile?_method=DELETE" method="POST">
+                        <a class="nav-link active">Logout</a>
+                        </form>
+                    </li>
+                    <% } else { %>
+                        <li class="nav-item">
+                            <form action="/SignIn" method="POST">
+                                <a class="nav-link active" href="/SignIn">LogIn</a>
+                            </form>
+                        </li>
+                    <% } %>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Type..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main">
+
+    <!--
+     # #    # ##### #####   ####
+     # ##   #   #   #    # #    #
+     # # #  #   #   #    # #    #
+     # #  # #   #   #####  #    #
+     # #   ##   #   #   #  #    #
+     # #    #   #   #    #  ####
+     -->
+    <div class="contain">
+
+        <img src="photos/tour.jpeg" class="back_pic" alt="" style="position	: relative;">
+        <div class="intro__wrapper" style="position	: absolute;">
+
+            <h3 class="intro__subtitle">COMFORT • PLAN • SAVE</h3>
+            <h1 class="intro__title">
+                Our mission is to make your trip comfort
+            </h1>
+
+            <a id="demo" onmouseover="myFunction()" onmouseout="myFunction1()" href="Register" class="intro-btn">Login</a>
+            <script>
+                function myFunction(){
+                    document.getElementById("demo").style.fontSize = "x-large";
+                }
+                function myFunction1(){
+                    document.getElementById("demo").style.fontSize = "small";
+                }
+            </script>
+        </div>
+    </div>
+
+
+
+
+    <!--
+     ######  ####### #     # #     # #       #######    #    ######
+     #     # #     # #  #  # ##    # #       #     #   # #   #     #
+     #     # #     # #  #  # # #   # #       #     #  #   #  #     #
+     #     # #     # #  #  # #  #  # #       #     # #     # #     #
+     #     # #     # #  #  # #   # # #       #     # ####### #     #
+     #     # #     # #  #  # #    ## #       #     # #     # #     #
+     ######  #######  ## ##  #     # ####### ####### #     # ######
+     -->
+
+    <section class="download">
+        <div class="download__wrapper">
+            <h3 class="download__title">
+                You can download one of the most beautiful pictures of cities
+            </h3>
+            <a class="download-btn"
+               onclick="myFunction2()"
+                    href="logo/AstanaCorect.jpg" download="Best city" >Download now</a>
+            <script>
+                function myFunction2(){
+                    alert("Thank you for download!")
+                }
+            </script>
+
+        </div>
+    </section>
+
+    <!--
+      ####  #####  ####  #####  #   #
+     #        #   #    # #    #  # #
+      ####    #   #    # #    #   #
+          #   #   #    # #####    #
+     #    #   #   #    # #   #    #
+      ####    #    ####  #    #   #
+     -->
+
+
+    <section class="story">
+        <div class="container">
+            <div class="story__wrapper">
+                <div class="story__main">
+                    <h2 class="story__title">
+                        Nur-Sultan
+                    </h2>
+                    <h3 class="story__subtitle">
+                        Capital of Kazakhstan
+                    </h3>
+                    <p class="story__text">
+                        Nur-Sultan is located in the center of Kazakhstan in the dry steppe zone and in the grass steppe subzone. The area of the city stands above the flood plain of the Yessil River. The city has a climate similar to North and South Dakota with cold winters, beautiful springtimes and sweltering summers.
+                        <br><br>Curabitur aliquet quam id dui posuere blandit.<br>
+                        Nur-Sultan’s favourable location in the centre of the Eurasian continent makes it an economically advantageous transport, communication, logistics and financial center - a natural bridge between Europe and Asia and point of integration into the global economy for the region.
+                        The choice was made in favor of Nur-Sultan due to a number of decided advantages: vast urban area, favorable geographical location - close to the country’s main economic centers, significant demographic potential, well-developed transport infrastructure and the relatively favorable environment.
+                    </p>
+
+                </div>
+                <div class="story__pic">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="photos/6666.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="photos/2222.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="photos/3333.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="photos/5555.jpg" />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--
+     #    # # #####  ######  ####
+     #    # # #    # #      #    #
+     #    # # #    # #####  #    #
+     #    # # #    # #      #    #
+      #  #  # #    # #      #    #
+       ##   # #####  ######  ####
+     -->
+
+    <section class="video">
+        <div class="video__wrapper">
+            <h2 class="video__title">
+                See our video
+            </h2>
+            <video width="100%" height="370px" style="" controls>
+                <source src="photos/Nur.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="map_wapper">
+            <h2 class="map_title"> Map of Kazakhstan </h2>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11008203.026412928!2d57.9324445294976!3d47.65431929471069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91007ecfca947%3A0x5f7b842fe4b30e1b!2z0JrQsNC30LDRhdGB0YLQsNC9!5e0!3m2!1sru!2skz!4v1646561074811!5m2!1sru!2skz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </iframe>
+        </div>
+    </section>
+
+    <section class="cities">
+        <div class="cities_wapper">
+        <h3 class="cities_title ">Best cities of Kazakhstan </h3>
+            <div class="container-fluid bg-3 text-center">
+
+        <div class="row">
+            <div class="col-sm-3">
+                <img id="flip" src="photos/Shymkent.jpg"  class="scale" style="width:100%" alt="Image">
+                <p id="panel" style="font-family: 'Cinzel';"> Shymkent city, south-central Kazakhstan. It lies in the valley of the Sayram River in the foothills of the Ugam Range at an elevation of 1,680 feet (512 metres).</p>
+            </div>
+            <div class="col-sm-3">
+                <img id="fl" src="photos/Uralsk.jpg" class="scale" style="width:100%" alt="Image">
+                <p id="pa" style="font-family: 'Cinzel'; display: none;"> Uralsk is a city in the European part of western Kazakhstan, on the Ural River (formerly the Yaik River). Uralsk is the administrative center of the West Kazakhstan region</p>
+            </div>
+            <div class="col-sm-3">
+                <img id="f"src="photos/Aqtau.jpg" class="scale" style="width:100%" alt="Image">
+                <p id="p" style="font-family:'Cinzel';"> Aktau is a city in Kazakhstan, located on the eastern shore of the Caspian Sea. Its current name means "white mountain" in Kazakh, which may be due to its cliffs that overlook the Caspian</p>
+            </div>
+            <div class="col-sm-3">
+                <img id="s" src="photos/Taraz.jpg" class="scale" style="width:100%" alt="Image">
+                <p id="r" style="font-family: 'Cinzel';"> Taraz is one of the oldest cities in Kazakhstan and is often called the cradle of Islamic culture in this state.</p>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+<section>
+        <div class="footer__wrapper">
+            <div class="footer__logo"></div>
+            <div class="footer__social">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-youtube"></i>
+            </div>
+            <h5 class="footer__title">
+                © 2022 -  Tourism in Kazakhstan,All Rights Reserved
+            </h5>
+        </div>
+
+</section>
+</main>
+
+
+
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="swipebox.js"></script>
+
+
+
+</body>
+</html>

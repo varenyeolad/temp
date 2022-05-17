@@ -1,0 +1,65 @@
+.register{
+    font-family: 'Cinzel', sans-serif;
+    font-weight: 1000;
+    font-size: 16px;
+    margin: 0% 30% 30% 30%;
+    border: 15px solid white;
+    padding: 2px;
+    background-color: white;
+}
+
+.containerSignIn{
+    margin-left: 0px;
+
+}
+
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+.registerbtn {
+    background-color: grey;
+    color: white;
+    padding: 16px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+}
+footer {
+    padding: 10px;
+    position: fixed;
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.footer__logo {
+    margin-bottom: 40px;
+}
+
+.footer__social i {
+    font-size: 30px;
+    color: #000000;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    transition: .35s linear;
+    cursor: pointer;
+}
+
+.footer__social i:hover {
+    color: #c0a473;
+}
+
+.footer__title {
+    font-size: 14px;
+    color: #000000;
+    text-transform: none;
+}

@@ -1,0 +1,206 @@
+body {
+    font-family: 'Cinzel', sans-serif;
+    font-size: 20px;
+    color: #333;
+    background-color: #fefefe;
+}
+
+.navbar, .navbar-expand-lg {
+    background-color: #fefefe;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.carousel-control-prev-icon {
+    background-image: url("back.png");
+}
+.carousel-control-next-icon {
+    background-image: url("next.png");
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 20px;
+}
+.carousel-control-prev {
+    left: -35px;
+}
+.carousel-control-next {
+    right: -35px;
+}
+.col-7 h1{
+   text-align: center;
+    font-family: 'Cinzel', sans-serif;
+    font-size: 40px;
+    margin-top: 0px;
+}
+.col-7 h1:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    margin: 30px auto 0;
+
+}
+.col-7 h3 {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+.container-xxl h2 {
+    text-align: center;
+    font-family: 'Cinzel', sans-serif;
+    font-size: 40px;
+    margin-top: 0px;
+}
+
+.container-xxl h2:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    margin: 30px auto 0;}
+
+.carousel-inner, .carousel-item {
+    color: black;
+    font-size: 20px;
+}
+.card-title {
+    text-align: center;
+    font-family: 'Cinzel',sans-serif;
+    font-size: 35px;
+}
+.card-text {
+    text-align: center;
+}
+.btn-primary {
+    position: relative;
+    margin-top: 7%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+@media (max-width: 991px) {
+    .row {
+        padding: 50px;
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+    .col-5 {
+        width: 100%;
+    }
+
+    .notification.go {
+        left: 20px;
+        opacity: 1;
+    }
+
+    .notification .left_noth_prem {
+        width: 70%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .notification .left_noth_prem .tit {
+        font-size: 15px;
+        color: #333333;
+        line-height: 1.2;
+        font-weight: bold;
+    }
+
+    .notification .left_noth_prem .descr {
+        font-weight: bold;
+        font-size: 14px;
+        color: #333333;
+        margin: 0.2em 0;
+    }
+
+    .notification .left_noth_prem > .btns {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-align-items: center;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 6px;
+    }
+
+    .notification .left_noth_prem > .btns a {
+        border-radius: 3px;
+        padding: 4px 0;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        transition: all 0.4s ease-in-out;
+        display: block;
+        width: 47%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .notification .left_noth_prem > .btns a:hover {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        transform: scale(1.18);
+    }
+
+    .notification .left_noth_prem > .btns a.youtube_bg {
+        background-image: linear-gradient(45deg, #ff416c, #ff4b2b);
+    }
+
+    .notification .right_noth_prem {
+        width: 30%;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        padding: 10px;
+    }
+
+    .notification .right_noth_prem > img {
+        width: 75px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
+    footer {
+        padding: 10px;
+        position: fixed;
+    }
+
+    .footer__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer__logo {
+        margin-bottom: 40px;
+    }
+
+    .footer__social i {
+        font-size: 30px;
+        color: #000000;
+        margin-right: 30px;
+        margin-bottom: 40px;
+        transition: .35s linear;
+        cursor: pointer;
+    }
+
+    .footer__social i:hover {
+        color: #c0a473;
+    }
+
+    .footer__title {
+        font-size: 14px;
+        color: #000000;
+        text-transform: none;
+    }
+}
